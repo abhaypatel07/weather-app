@@ -1,0 +1,106 @@
+.card {
+    height: 250px;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow:hidden;
+    display:flex;
+    flex-direction : column;
+    justify-content:space-between;
+    align-items:center;
+    padding: 40px;
+    color: #fff;
+    index:200;
+  }
+
+.weatherInfo{
+  display:flex;
+  justify-content : space-around;
+  width:90%;
+}
+.divider {
+  border-left: 1px solid #ccc; 
+  height: 100%; 
+  margin: 0 10px; 
+}
+.left{
+   display:flex;
+  flex-direction:column;
+  gap:7px;
+  justify-content:center;
+  align-items:center;
+}
+
+.right{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:10px
+}
+
+.cityName{
+  font-size:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.highLow{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  gap:10px;
+}
+
+.high, .low{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+button{
+  padding:5px;
+  margin-top:5px;
+  border-radius:5px;
+  border:none;
+  color:#fff;
+  background-color:#3498db;
+}
+
+button:hover{
+  background-color:#f99fff;
+}
+
+@media (max-width: 480px) {
+  .card{
+    height: 320px;
+    padding:20px;
+    width: 80vw;
+  }
+
+  .weatherInfo{
+    display:flex;
+    flex-direction:column;
+    justify-content : space-around;
+    width:90%;
+  }
+
+  .divider {
+    border-left: 1px solid #ccc; 
+    width:100%;
+    margin:20px 0;    
+  }
+
+}
