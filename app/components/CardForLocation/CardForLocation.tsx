@@ -19,7 +19,9 @@ const CardForLocation = (props:any) => {
   const latLong = props.latLong;
   const [loading, setLoading] = useState<boolean>(false);
 
-  const getWeather = async ()=>{
+  
+  useEffect(()=>{
+    const getWeather = async ()=>{
       try {
         setLoading(true);
         const result = await ApiService.getWeatherFromLatLong(latLong.lat,latLong.long);
@@ -30,10 +32,8 @@ const CardForLocation = (props:any) => {
         setLoading(false);
       }
   };
-
-  useEffect(()=>{
     getWeather();
-  },[latLong,getWeather])
+  },[latLong])
 
   const getTempSymbol = (celsius:number) => {
     if (celsius < 0) {
