@@ -33,7 +33,7 @@ const CardForLocation = (props:any) => {
 
   useEffect(()=>{
     getWeather();
-  },[latLong])
+  },[latLong,getWeather])
 
   const getTempSymbol = (celsius:number) => {
     if (celsius < 0) {
